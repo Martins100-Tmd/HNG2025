@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card - Frontend Wizards Stage 0</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Asap"
+    />
+  </head>
+  <body>
+    <article class="profile-card" data-testid="test-profile-card">
+      <div class="card-content">
+        <header class="card-header">
+          <figure class="avatar-container">
+            <img
+              src="https://res.cloudinary.com/dmaag3pvx/image/upload/v1760815071/Martins_rlhbhg.jpg"
+              alt="Profile picture of Alex Johnson"
+              class="avatar-image"
+              data-testid="test-user-avatar"
+            />
+          </figure>
+
+          <div class="user-info">
+            <h2 data-testid="test-user-name">Martins Olumide</h2>
+            <div
+              class="timestamp"
+              data-testid="test-user-time"
+              id="timestamp"
+            ></div>
+            <p class="bio" data-testid="test-user-bio">
+              Full-stack developer passionate about building accessible and
+              performant web applications. Love exploring new technologies and
+              contributing to open-source projects. Always learning, always
+              growing.
+            </p>
+
+            <nav class="social-nav" aria-label="Social media links">
+              <ul class="social-links" data-testid="test-user-social-links">
+                <li>
+                  <a
+                    href="https://x.com/martinsolumide8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="test-user-social-twitter"
+                  >
+                    🐦 Twitter
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/Martins100-Tmd"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="test-user-social-github"
+                  >
+                    💻 GitHub
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://linkedin.com/in/martins100_tmd"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid="test-user-social-linkedin"
+                  >
+                    💼 LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+
+        <div class="details-section">
+          <section class="section" data-testid="test-user-hobbies">
+            <h3>✨ Hobbies</h3>
+            <ul>
+              <li>
+                Building side projects and experimenting with new frameworks
+              </li>
+              <li>
+                Reading tech blogs and staying updated with industry trends
+              </li>
+              <li>Playing chess and strategy games</li>
+              <li>Study Mathematics & Computer science concepts</li>
+              <li>Contributing to open-source communities</li>
+              <li>Leetcoding babyy!!!!</li>
+            </ul>
+          </section>
+
+          <section class="section" data-testid="test-user-dislikes">
+            <h3>⚠️ Dislikes</h3>
+            <ul>
+              <li>Poorly documented code and APIs</li>
+              <li>Skipping tests and proper code reviews</li>
+              <li>Inaccessible websites and applications</li>
+              <li>Ignoring user feedback and experience</li>
+              <li>Technical debt that never gets addressed</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <script>
+      function updateTimestamp() {
+        const timestampElement = document.getElementById("timestamp");
+        if (timestampElement) {
+          timestampElement.textContent = Date.now();
+        }
+      }
+
+      updateTimestamp();
+
+      setInterval(updateTimestamp, 1000);
+    </script>
+  </body>
+</html>
